@@ -5,6 +5,10 @@
     --secondary-bg-color: #82071B;
 }
 
+.MyWorld{
+    font-family: "Righteous", sans-serif;
+}
+
 body {
     background-color: var(--primary-bg-color);
     color: var(--primary-txt-color);
@@ -16,6 +20,10 @@ h1,
 h2,
 h3 {
     font-family: "Amaranth", sans-serif;
+}
+
+main{
+    margin: 20px 10%;
 }
 
 .page-logo {
