@@ -14,24 +14,24 @@ body {
 
 h1,
 h2,
-h3{
+h3 {
     font-family: "Amaranth", sans-serif;
 }
 
-.page-logo{
-    & a{
+.page-logo {
+    & a {
         color: var(--secondary-txt-color);
         font-family: "Righteous", sans-serif;
         font-size: 25px;
         text-decoration: none;
     }
 
-    & a:hover{
+    & a:hover {
         text-decoration: underline;
     }
 }
 
-.navigation-bar{
+.navigation-bar {
     background-color: var(--secondary-bg-color);
     color: var(--secondary-txt-color);
     list-style-type: none;
@@ -42,12 +42,35 @@ h3{
     justify-content: space-between;
 }
 
-.list-container{
+.list-container {
     color: var(--secondary-txt-color);
     list-style-type: none;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 600;
     display: flex;
+
+    & a {
+        color: var(--secondary-txt-color);
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+    & .list-element {
+        margin: 0 25px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+    width: 100%;
+    text-align: center;
 
     & a{
         color: var(--secondary-txt-color);
@@ -56,9 +79,5 @@ h3{
 
     & a:hover{
         text-decoration: underline;
-    }
-
-    & .list-element{
-        margin: 0 25px;
     }
 }
