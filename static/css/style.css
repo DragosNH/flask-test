@@ -1,9 +1,44 @@
 :root {
-    --primary-bg-color: #f4f4f4;
+    --primary-bg-color: #fafafa;
     --primary-txt-color: #050505;
+    --secondary-txt-color: #fafafa;
+    --secondary-bg-color: #82071B;
 }
 
 body {
     background-color: var(--primary-bg-color);
     color: var(--primary-txt-color);
+    margin: 0;
+}
+
+.page-logo{
+    & a{
+        color: var(--secondary-txt-color);
+    }
+}
+
+.navigation-bar{
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+    list-style-type: none;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list-container{
+    color: var(--secondary-txt-color);
+    list-style-type: none;
+    display: flex;
+
+    & a{
+        color: var(--secondary-txt-color);
+        text-decoration: none;
+    }
+
+    & .list-element{
+        margin: 0 25px;
+    }
 }
