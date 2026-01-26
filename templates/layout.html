@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <h3 class="page-logo"><a href="{{ url_for('index') }}">MyWorld</a></h3>
+        <ul class="list-container">
+            <li class="list-element"><a href="{{ url_for('my_page') }}">My Page</a></li>
+            <li class="list-element"><a href="{{ url_for('my_fans') }}">My Fans</a></li>
+            <li class="list-element">Cotanct</li>
+        </ul>
+        <div class="connection">
+            <!-- This is going to be the log in box latter on -->
+            <button>for the moment</button>
+        </div>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <h4><a href="https://github.com/DragosNH">My Github</a></h4>
+    </footer>
+</body>
+
+</html>
