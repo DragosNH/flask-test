@@ -1,0 +1,26 @@
+:root {
+    --primary-bg-color: #fafafa;
+    --primary-txt-color: #050505;
+    --secondary-txt-color: #fafafa;
+    --secondary-bg-color: #82071B;
+    --primary-border-color: #fafafa;
+    --active-btn-bg: #93182c;
+    --active-border-color: #c8c8c8;
+    --active-txt-color: #c8c8c8;
+}
+
+.loginBtn{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    border: 3px solid var(--primary-border-color);
+    border-radius: 7px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+    padding: 10px 25px;
+}
+
+.loginBtn:active{
+    border: 3px solid var(--active-border-color);
+    color: var(--active-txt-color);
+    background-color: var(--active-btn-bg);
+}
