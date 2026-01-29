@@ -9,7 +9,7 @@
     --active-txt-color: #c8c8c8;
 }
 
-.loginBtn{
+.loginBtn {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 600;
     border: 3px solid var(--primary-border-color);
@@ -19,14 +19,14 @@
     padding: 10px 25px;
 }
 
-.loginBtn:active{
+.loginBtn:active {
     border: 3px solid var(--active-border-color);
     color: var(--active-txt-color);
     background-color: var(--active-btn-bg);
 }
 
 
-.loginBox{
+.loginBox {
     border: 3px solid var(--primary-border-color);
     border-radius: 7px;
     padding: 7px;
@@ -41,10 +41,46 @@
     flex-direction: column;
 }
 
-.loginForm{
+.loginForm {
     text-align: center;
 }
 
-.hidden{
+.signUp {
+    margin-top: 15px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 7px;
+    background-color: var(--primary-bg-color);
+    color: var(--secondary-txt-color);
+    padding: 5px 10px;
+    width: 90px;
+    color: var(--secondary-bg-color);
+}
+
+.signUp:active{
+    border: 1px solid var(--active-btn-bg);
+    background-color: var(--active-txt-color);
+    color: var(--active-btn-bg);
+}
+
+.loginToAccBtn {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    border: 1px solid var(--primary-border-color);
+    border-radius: 7px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+    padding: 5px 10px;
+    width: 90px;
+}
+
+.loginToAccBtn:active {
+    border: 3px solid var(--active-border-color);
+    color: var(--active-txt-color);
+    background-color: var(--active-btn-bg);
+}
+
+.hidden {
     display: none;
 }
