@@ -24,3 +24,27 @@
     color: var(--active-txt-color);
     background-color: var(--active-btn-bg);
 }
+
+
+.loginBox{
+    border: 3px solid var(--primary-border-color);
+    border-radius: 7px;
+    padding: 7px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-color: var(--secondary-bg-color);
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginForm{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
