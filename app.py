@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 import os
-from flask_login import LoginManager
+from flask_login import LoginManager, login_required
+from http import HTTPStatus
 
 app = Flask(__name__)
 login_manager = LoginManager()
@@ -22,9 +23,26 @@ def my_fans():
 def contact():
     return render_template('contact.html')
 
+# ------ Login area ------
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.get(user_id)
+
+@app.route("/login")
+def login_page():
+    return render_template('login.html')
+
+@app.route("/settings")
+@login_required
+def settings():
+    pass
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect('/')
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
