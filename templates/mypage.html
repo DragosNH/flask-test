@@ -3,6 +3,11 @@
 {% block title %}My page {% endblock %}
 
 {% block content %}
-<h1>My page</h1>
-
+    {% if user %}
+        <h1>{{ user }}</h1>
+        <h2>Welcome {{ user }}</h2>
+        <p>This is your feed</p>
+    {% else %}
+        <p>Please log in to see the feed</p>
+    {% endif %}
 {% endblock %}
