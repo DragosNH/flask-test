@@ -23,7 +23,7 @@
             <li class="list-element"><a href="{{ url_for('my_page') }}">My Page</a></li>
             <li class="list-element"><a href="{{ url_for('my_fans') }}">My Fans</a></li>
             <li class="list-element"><a href="{{ url_for('contact') }}">Cotanct</a></li>
-            <li class="list-element"><a href="{{ url_for('login_page') }}">Login*</a></li>
+            <li class="list-element"><a href="{{ url_for('login') }}">Login*</a></li>
         </ul>
         <div class="connection">
             <div class="loginContainer">
@@ -33,7 +33,7 @@
                 <button class="loginBtn">Login</button>
                 {% endif %}
                 <div class="loginBox hidden">
-                    <form class="loginForm" method="POST" action="{{ url_for('login_page') }}">
+                    <form class="loginForm" method="POST" action="{{ url_for('login') }}">
                         <input type="text" id="username" name="username" placeholder="Username"><br /><br />
                         <input type="password" id="password" name="password" placeholder="Password"><br /><br />
                         <input class="loginToAccBtn" type="submit" value="Login">
