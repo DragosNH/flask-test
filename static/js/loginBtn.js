@@ -4,12 +4,14 @@ const loginBox = document.querySelector(".loginBox");
 const removeHidden = () => {
     if (loginBox.classList.contains("hidden")) {
         loginBox.classList.remove("hidden");
+        loginBtn.classList.add("hidden");
     }
 }
 
 const addHidden = () => {
     if (!loginBox.classList.contains("hidden")) {
         loginBox.classList.add("hidden")
+        loginBtn.classList.remove("hidden");
     }
 }
 
