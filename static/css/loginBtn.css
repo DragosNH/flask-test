@@ -58,7 +58,7 @@
     color: var(--secondary-bg-color);
 }
 
-.signUp:active{
+.signUp:active {
     border: 1px solid var(--active-btn-bg);
     background-color: var(--active-txt-color);
     color: var(--active-btn-bg);
@@ -83,4 +83,14 @@
 
 .hidden {
     display: none;
+}
+
+.usernameOutput {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    border: 3px solid var(--primary-border-color);
+    border-radius: 7px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+    padding: 5px 15px;
 }

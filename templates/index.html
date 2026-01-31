@@ -4,6 +4,13 @@
 
 {% block content %}
     <h1><span class="MyWorld">MyWorld</span> my rulles... Get used to it</h1>
-    <p>This content is unique to this page.</p>
+    {% if user %}
+        <h2>Welcome {{ user }}</h2>
+        <p>This is your feed</p>
+    {% else %}
+        <p>Please log in to see the feed</p>
+        <a href="{{ url_for('login_page') }}">Login</a>
+    {% endif %}
+        <p>This content is unique to this page.</p>
     <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}

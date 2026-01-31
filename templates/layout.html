@@ -27,9 +27,13 @@
         </ul>
         <div class="connection">
             <div class="loginContainer">
+                {% if user %}
+                <p class="usernameOutput">{{ user }}</p>
+                {% else %}
                 <button class="loginBtn">Login</button>
+                {% endif %}
                 <div class="loginBox hidden">
-                    <form class="loginForm" action="login">
+                    <form class="loginForm" method="POST" action="{{ url_for('login_page') }}">
                         <input type="text" id="username" name="username" placeholder="Username"><br /><br />
                         <input type="password" id="password" name="password" placeholder="Password"><br /><br />
                         <input class="loginToAccBtn" type="submit" value="Login">
