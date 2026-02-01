@@ -94,3 +94,34 @@
     color: var(--secondary-txt-color);
     padding: 5px 15px;
 }
+
+/* --------- Log Out --------- */
+.usernameOutputContainer{
+    border: 3px solid var(--primary-border-color);
+    border-radius: 7px;
+    padding: 7px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    background-color: var(--secondary-bg-color);
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logout{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    border: 1px solid var(--primary-border-color);
+    border-radius: 7px;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+    padding: 5px 10px;
+    width: 90px;
+}
+
+.usernameOutputContainer.hidden {
+    display: none;
+}

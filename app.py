@@ -43,8 +43,6 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
 
-        print("DEBUG:", username, password)
-
         if username in FAKE_USERS and FAKE_USERS[username] == password:
             session["user"] = username
             return redirect("/")

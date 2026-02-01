@@ -1,27 +1,52 @@
+// Logged-out elements
 const loginBtn = document.querySelector(".loginBtn");
 const loginBox = document.querySelector(".loginBox");
 
-const removeHidden = () => {
-    if (loginBox.classList.contains("hidden")) {
+// Logged-in elements
+const usernameOutput = document.querySelector(".usernameOutput");
+const usernameOutputContainer = document.querySelector(".usernameOutputContainer");
+
+// --------------------
+// LOGGED-OUT BEHAVIOR
+// --------------------
+if (loginBtn && loginBox) {
+    loginBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         loginBox.classList.remove("hidden");
         loginBtn.classList.add("hidden");
-    }
+    });
+
+    loginBox.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
 }
 
-const addHidden = () => {
-    if (!loginBox.classList.contains("hidden")) {
-        loginBox.classList.add("hidden")
+// --------------------
+// LOGGED-IN BEHAVIOR
+// --------------------
+if (usernameOutput && usernameOutputContainer) {
+    usernameOutput.addEventListener("click", (e) => {
+        e.stopPropagation();
+        usernameOutputContainer.classList.toggle("hidden");
+    });
+
+    usernameOutputContainer.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+}
+
+// --------------------
+// CLICK OUTSIDE → CLOSE
+// --------------------
+window.addEventListener("click", () => {
+    // Close login box (logged out)
+    if (loginBox && loginBtn) {
+        loginBox.classList.add("hidden");
         loginBtn.classList.remove("hidden");
     }
-}
 
-loginBtn.addEventListener("click", e => {
-    e.stopPropagation();
-    removeHidden();
-})
-
-loginBox.addEventListener("click", e => {
-    e.stopPropagation();
-})
-
-window.addEventListener("click", addHidden)
+    // Close user dropdown (logged in)
+    if (usernameOutputContainer) {
+        usernameOutputContainer.classList.add("hidden");
+    }
+});
