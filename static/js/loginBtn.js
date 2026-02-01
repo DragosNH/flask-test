@@ -6,9 +6,7 @@ const loginBox = document.querySelector(".loginBox");
 const usernameOutput = document.querySelector(".usernameOutput");
 const usernameOutputContainer = document.querySelector(".usernameOutputContainer");
 
-// --------------------
-// LOGGED-OUT BEHAVIOR
-// --------------------
+// --- Login Behaviour ---
 if (loginBtn && loginBox) {
     loginBtn.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -21,9 +19,7 @@ if (loginBtn && loginBox) {
     });
 }
 
-// --------------------
-// LOGGED-IN BEHAVIOR
-// --------------------
+// --- Logout behaviour ---
 if (usernameOutput && usernameOutputContainer) {
     usernameOutput.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -35,9 +31,7 @@ if (usernameOutput && usernameOutputContainer) {
     });
 }
 
-// --------------------
-// CLICK OUTSIDE → CLOSE
-// --------------------
+
 window.addEventListener("click", () => {
     // Close login box (logged out)
     if (loginBox && loginBtn) {
