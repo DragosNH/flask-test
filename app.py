@@ -16,15 +16,18 @@ def index():
 
 @app.route("/my-page")
 def my_page():
-    return render_template('mypage.html')
+    user = session.get("user")
+    return render_template('mypage.html', user=user)
 
 @app.route("/my-fans")
 def my_fans():
-    return render_template('myfans.html')
+    user = session.get("user")
+    return render_template('myfans.html', user=user)
 
 @app.route("/contact")
 def contact():
-    return render_template('contact.html')
+    user = session.get("user")
+    return render_template('contact.html', user=user)
 
 @app.route("/logout")
 def logout():
