@@ -56,6 +56,11 @@
     padding: 5px 10px;
     width: 90px;
     color: var(--secondary-bg-color);
+
+    & a {
+        color: var(--secondary-bg-color);
+        text-decoration: none;
+    }
 }
 
 .signUp:active {
@@ -96,7 +101,7 @@
 }
 
 /* --------- Log Out --------- */
-.usernameOutputContainer{
+.usernameOutputContainer {
     border: 3px solid var(--primary-border-color);
     border-radius: 7px;
     padding: 7px;
@@ -111,7 +116,7 @@
     flex-direction: column;
 }
 
-.logout{
+.logout {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 600;
     border: 1px solid var(--primary-border-color);
