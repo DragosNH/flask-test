@@ -56,6 +56,23 @@ def login():
 def signup_page():
     return render_template('signup.html')
 
+@app.route("/signup", methods=['POST'])
+def signup():
+    username = request.form.get('username')
+    password = request.form.get('password')
+
+    if not username or not password:
+        return redirect("/signup_page")
+
+    if username in FAKE_USERS:
+        return redirect("/signup_page")
+
+    FAKE_USERS[username] = password
+
+    session["user"] = username
+
+    return redirect('/')
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
